@@ -5,4 +5,4 @@ A class named 'Board' is used to instantiate a board object and parameters like 
 
 A simple recustion is applied to get the number of neighbouring safe spots of a particular coodrdinates.
 
-Enjoy!
+Enjoy!!
