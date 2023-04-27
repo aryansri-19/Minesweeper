@@ -13,7 +13,7 @@ class Board:
         self.mines = set(tuple())
         self.neighbours = 0 #counter for checking safe spots
 
-    #printing fucntion    
+    #printing function    
     def printBoard(self):
         print("  1  2  3  4  5  6  7  8  9  10")
         for i in range(self.side):
@@ -29,7 +29,7 @@ class Board:
             column = mine%self.side
             self.mines.add((row, column))
 
-    #asking for guess from the user
+    #Asking user to guess a safe spot
     def guess(self):
         x, y = [int(x) for x in input("Enter the row and column for the safe spot: ").split()]
         if self.validationCheck(x, y):
@@ -42,7 +42,7 @@ class Board:
             self.used_spots.add((x-1, y-1))
         board.printBoard()
 
-    #checking if coordinates are appropriate
+    #checking if the inputted coordinates are appropriate
     def validationCheck(self, row, column):
         if row > self.side or row < 1 or column > self.side or column < 1 or (row, column) in self.used_spots:
             return True
